@@ -261,8 +261,11 @@ def update_output(user):
     df_slice = df_movies[df_movies['movie_id'].isin(movies_ids)]
     posters = [*df_slice['Poster'].values]
     titles = [*df_slice['Title'].values]
-    return posters[0], posters[1], posters[2], posters[3], posters[4], posters[5], posters[6], posters[7], titles[0], titles[1], titles[2], titles[3], titles[4], titles[5], titles[6], titles[7], comment
-
+    output = (posters[0], posters[1], posters[2], posters[3],
+              posters[4], posters[5], posters[6], posters[7],
+              titles[0], titles[1], titles[2], titles[3],
+              titles[4], titles[5], titles[6], titles[7], comment)
+    return output
 
 #===================================run server====================================#
 if __name__ == '__main__':
